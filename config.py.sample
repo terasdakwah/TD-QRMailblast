@@ -4,3 +4,5 @@ RABBITMQ_PASS = "guest"
 
 MJ_APIKEY_PUBLIC = ""
 MJ_APIKEY_PRIVATE = ""
+
+PASSWORD = ""

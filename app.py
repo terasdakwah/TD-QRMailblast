@@ -1,5 +1,5 @@
 import os, json, requests, pika, time, datetime
-from config import RABBITMQ_HOST, RABBITMQ_USER, RABBITMQ_PASS
+from config import RABBITMQ_HOST, RABBITMQ_USER, RABBITMQ_PASS, PASSWORD_
 from flask import Flask, render_template
 from flask import flash, request, redirect, url_for
 from werkzeug.utils import secure_filename
@@ -70,6 +70,11 @@ def upload_file():
         return render_template('waiting.html', sisa=messages_ready)
 
     if request.method == 'POST':
+        password = request.form.get('password', '')
+        if password!=PASSWORD_:
+            flash('Tidak diijinkan')
+            return redirect(url_for('upload_file'))
+
         if 'file' not in request.files:
             flash('File tidak ditemukan')
 
