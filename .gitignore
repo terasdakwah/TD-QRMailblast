@@ -2,3 +2,7 @@ config.py
 __pycache__/*
 uploads/*
 venv/*
+err.log
+errd.log
+out.log
+outd.log

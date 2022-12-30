@@ -73,7 +73,7 @@ def upload_file():
         password = request.form.get('password', '')
         if password!=PASSWORD_:
             flash('Tidak diijinkan')
-            return redirect(url_for('upload_file'))
+            return redirect('https://emailqr.terasdakwah.com')
 
         if 'file' not in request.files:
             flash('File tidak ditemukan')
@@ -105,7 +105,7 @@ def upload_file():
 
                     flash('Proses mengirim email')
                     flash('Refresh halaman ini untuk melihat prosesnya')
-                    return redirect(url_for('upload_file'))
+                    return redirect('https://emailqr.terasdakwah.com')
                 else:
                     flash('Format file salah')
 
