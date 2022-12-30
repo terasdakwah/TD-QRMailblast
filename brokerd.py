@@ -25,7 +25,7 @@ def sendMailjetQR(name, email, judul):
                                     }
                             ],
                             "Subject": judul,
-                            "TextPart": "Assalamualaikum %s. Bawa dan tunjukkan QR Code ini untuk registrasi kajian %s. QR Code ada pada lampiran email." % (name,),
+                            "TextPart": "Assalamualaikum %s. Bawa dan tunjukkan QR Code ini untuk registrasi kajian %s. QR Code ada pada lampiran email." % (name, judul),
                             "HTMLPart": "<h3>Assalamualaikum %s.<br/>Bawa dan tunjukka QR Code ini untuk registrasi kajian %s<br/> <img src=\"cid:id1\" width=\"100%%\"></h3>" % (name, judul),
                             "InlinedAttachments": [
                                     {
